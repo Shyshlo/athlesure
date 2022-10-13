@@ -4,10 +4,13 @@ import { data } from './data';
 import Clothes from './Clothes'
 import Buttons from './Buttons';
 import Slider from './Slider';
+import Footer from './Footer';
+import Cart from './Cart/Cart';
+import Slider1 from './Slider1';
 
 
 function HomePage() {
-   
+  
 
 
     const [clothes, setClothes] = useState(data);
@@ -17,16 +20,20 @@ function HomePage() {
     }
     
     return(
+   
+        
      <div>
-
+ 
         <div className='center'>
             <h1 className='shitting'>FREE SHIPPING ON $100!</h1>
         </div>
 
+     
+
     <Slider />
     <Buttons filterWord = {searchTermClothes}/>
     <Clothes codeWord = {clothes} />
-
+    <Footer />
     </div>
      
      ) 

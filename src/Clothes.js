@@ -1,6 +1,14 @@
+import { useState } from 'react';
+import ChangeQuantity from "./Cart/ChangeQuantity";
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from './redux/cartSlice';
 
 
-function Clothes({codeWord}) {
+
+const Clothes = ({codeWord}) => {
+const dispatch = useDispatch()
+    const [quantity, setQuantity] = useState(1);
+
 
     return(
         <div className='products'>
@@ -11,7 +19,10 @@ function Clothes({codeWord}) {
     <img src={image} width='400px' height='500px' alt='photo'/>
         <div className='productInfo'>
         <p>{name}</p>
-        <p>{price}$</p>
+        <p>${price}</p>
+        <ChangeQuantity quantity={quantity} setQuantity={setQuantity} />
+        <button className='addToCart' onClick = {() => {dispatch(addItemToCart({elements, quantity}))}}>Add to cart</button>
+        {/* elements - из map(cвязь с CartSlice - есть название одежды по id и количество - quantity)*/}
         </div>
 
              </div>

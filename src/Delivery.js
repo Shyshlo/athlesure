@@ -16,6 +16,7 @@ function Delivery() {
         <div className='container shitting'>
             <h3>Members spending $100 or more get free standard delivery</h3>
         </div>
+      
         {question.map((element => {
             const{id, question, description, showMore} = element;
       return(

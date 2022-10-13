@@ -29,6 +29,7 @@ function Slider() {
     }
     
     return (
+        <div className='sliderNone'>
     <div className='sliderPhone' key={id}>
 
         <div className = 'container'>
@@ -45,7 +46,15 @@ function Slider() {
 </div>
 
     </div>
+    </div>
     )
 }
 
 export default Slider;
+
+/*
+<div id="slider">
+<div class="arrow left"></div>
+<div class="arrow right"></div>
+</div>
+*/

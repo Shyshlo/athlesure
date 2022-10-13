@@ -11,13 +11,16 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Cart from './Cart/Cart';
+import Header from './Header';
 
 
 
 function App() {
  
-  return <Router>  
-  
+  return <Router> 
+
+  <Header />
   <nav>
   <Link to='/' className='Link'>Home</Link>
   <Link to='/delivery' className='Link'>Delivery</Link>
@@ -33,12 +36,6 @@ function App() {
 
 </Router>
 
-
-  return (
-    <div>
-     <HomePage />
-    </div>
-  );
 }
 
 export default App;
