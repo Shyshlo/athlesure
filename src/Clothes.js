@@ -9,6 +9,14 @@ const Clothes = ({codeWord}) => {
 const dispatch = useDispatch()
     const [quantity, setQuantity] = useState(1);
 
+const sliderNone = document.querySelector('.sliderNone');
+const button = document.querySelector('.addToCart');
+
+button.addEventListener('click', slider);
+function slider() {
+    sliderNone.style.display = 'none';
+}
+   
 
     return(
         <div className='products'>
@@ -21,7 +29,7 @@ const dispatch = useDispatch()
         <p>{name}</p>
         <p>${price}</p>
         <ChangeQuantity quantity={quantity} setQuantity={setQuantity} />
-        <button className='addToCart' onClick = {() => {dispatch(addItemToCart({elements, quantity}))}}>Add to cart</button>
+        <button className='addToCart' onClick = {() => {dispatch(addItemToCart({elements, quantity})); slider()}}>Add to cart</button>
         {/* elements - из map(cвязь с CartSlice - есть название одежды по id и количество - quantity)*/}
         </div>
 

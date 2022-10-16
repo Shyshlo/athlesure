@@ -30,7 +30,7 @@ function HomePage() {
 
      
 
-    <Slider />
+    <Slider /> 
     <Buttons filterWord = {searchTermClothes}/>
     <Clothes codeWord = {clothes} />
     <Footer />
